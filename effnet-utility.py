@@ -14,7 +14,7 @@ class Flatten(nn.Module):
     
 class Drop_Connect(nn.Module):
     """create a tensor mask and apply to inputs, for dropping drop_ratio % of connections"""
-    def __init__(self, drop_ratio=.2):
+    def __init__(self, drop_ratio=0):
         super().__init__()
         self.keep_percent = 1.0 - drop_ratio
 
